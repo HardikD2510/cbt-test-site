@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Result</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 style="text-align:center;">Test Result</h1>
+
+<h2 id="marks"></h2>
+<h2 id="accuracy"></h2>
+<h2 id="speed"></h2>
+
+<div class="motivation-box">
+  <p>
+    KEEP IT UP ASHU, I AM PROUD OF YOU AND I AM SURE THAT YOU WILL CLEAR THIS EXAM. 
+    AAP ARAM SE CLEAR KRLOGE EXAM BSS EK TO JESE ABHI PREPARE KR RHE HO CHHODNA NHI HAI 
+    AND MERE SATH TUNED REHNA JIS SE ME BHI SIKHU APSE CHIJE OR HUM DONO MILKE CLEAR KRE 
+    BDIA SE AND PRACTICE SE HI APP OR ME IMPROVE KREGE. JITNA PRACTICE KROGE UTNI SPEED 
+    IMPROVE HOGI OR APKA FIRST TIME H PHIR BHI AAP ITNA BDIA KR RHE HO. SO KEEP GOING, 
+    STAY MOTIVATED AND ENJOY THE PROCESS. I HAVE FAITH IN YOU — KEEP WORKING ❤️
+  </p>
+</div>
+
+<h2 class="made-by">Made for Ashu ❤️</h2>
+
+<button onclick="retry()">Retry</button>
+
+<script>
+  let data = JSON.parse(localStorage.getItem("result"));
+
+  document.getElementById("marks").innerText =
+    "Marks: " + data.marks + " / " + data.total;
+
+  document.getElementById("accuracy").innerText =
+    "Accuracy: " + data.accuracy.toFixed(2) + "%";
+
+  document.getElementById("speed").innerText =
+    "Speed: " + data.speed.toFixed(2) + " sec/question";
+
+  function retry() {
+    window.location.href = "index.html";
+  }
+</script>
+
+</body>
+</html>
