@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CBT Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h2 id="timer">Time: 0s</h2>
+    <h2>Question <span id="qNo"></span>/10</h2>
+  </div>
+
+  <!-- QUESTION -->
+  <div class="question-box">
+    <img id="questionImage">
+  </div>
+
+  <!-- BOTTOM (OPTIONS + BUTTONS) -->
+  <div class="bottom-section">
+
+    <div id="options" class="options"></div>
+
+    <div class="btns">
+      <button onclick="prevQuestion()">Previous</button>
+      <button onclick="skipQuestion()">Skip</button>
+      <button onclick="saveAndNext()">Next</button>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="questions.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
